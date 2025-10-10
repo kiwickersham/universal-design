@@ -1,0 +1,28 @@
+.sr-only { 
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+}
+
+.body {
+    /*paste font size here*/
+
+    font-size: 16px;
+}
+
+.container {
+  margin:0 auto;
+  /* 0 margin top and bottom, auto left and right */
+  max-width:960px;
+}
+
+p {
+    line-height: 1.6em;
+}
