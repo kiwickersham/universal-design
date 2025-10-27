@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Relevant HTML Part 2</title>
+    <!-- JS at bottom of page (or defer), CSS here-->
+    <style>
+        /* not best practice - saving time */
+        /*table css*/
+        table, th,td {
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: 30px;
+        }
+
+        td {
+            border: 2px solid green;
+            text-align: center;
+            width: 92px;
+        }
+
+        /*form css*/
+        input:focus {
+            background:black;
+            color:white;
+        }
+
+        input:valid {
+            border:2px solid blue;
+        }
+
+        input:invalid {
+            border: 2px dotted red;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input:not([type="submit"]) + .input-reqs {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 1s ease-out;
+        }
+
+        input:not([type="submit"]):hover + .input-reqs, 
+        input:not([type="submit"]):focus + .input-reqs,
+        input:not([type="submit"]):active + .input-reqs
+         {
+            max-height: 1000px;
+            transition: max-height 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <!--Table-->
+    <header><h1>Project-Relevant HTML Part 2</h1></header>
+    <main>
+        <section>
+            <h2>Accessible Table</h2>
+            <table>
+                <caption>Zelda Games by Release</caption> <!--title-visible on site-->
+                <thead> <!-- table header w names for each column-->
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">System</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Legend of Zelda</td>
+                        <td>1986</td>
+                        <td>NES</td>
+                    </tr>
+                    <tr>
+                        <td>Zelda II: Adventure of Link</td>
+                        <td>1987</td>
+                        <td>NES</td>
+                    </tr>
+                    <tr>
+                        <td>A Link to the Past</td>
+                        <td>1991</td>
+                        <td>Super Nintendo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Forms! -->
+        <section>
+            <h2>Accessible Form</h2>
+            <form id="survey-form" method="post">
+                <fieldset> <!-- sets of fields -->
+                    <legend>Basic Examples</legend>
+                    <label for="text-ex">Text Example
+                    <input type="text" id="text-ex" placeholder="Ocarina of Time">
+                    </label>
+                    <label for="email"> Email Example
+                    <input type="email" id="email">
+                    </label>
+                    <label for="website"> Website Example
+                    <input type="url" id="website">
+                    </label>
+                    <label for="phone-no"> Phone Example
+                    <input type="tel" id="phone-no">
+                    </label>
+                    <label for="num-ex"> Number Example
+                    <input type="number" id="num-ex">
+                    </label> 
+                    <label for="password"> Password Example
+                    <input type="text" id="password" maxlength="20" minlength="5"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+!=]).*" required>
+                    <ul class="input-reqs">
+                        <li>Text must be 5-20 chars and contain upper-and lowercase characters, numbers, and symbols.</li>
+                    </ul>
+                    </label> 
+                    <input type="submit">
+                </fieldset>
+                <fieldset>
+                    <!-- do radios here -->
+                     <legend>Radio Example: Favorite Game</legend>
+                     <label for="games">
+                        <input type="radio" id="games" value="The Legend of Zelda (Zelda I)">
+                        <input type="radio" id="games" value="Zelda II: Adventure of Link">
+                        <input type="radio" id="games" value="A Link to the Past">
+                     </label>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

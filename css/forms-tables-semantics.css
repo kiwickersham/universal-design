@@ -1,0 +1,154 @@
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+}
+
+/* fonts here */
+.body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin:0 auto;
+  /* 0 margin top and bottom, auto left and right */
+  max-width:960px;
+}
+
+h1, h2, h3, caption {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+
+h1 {
+  /* h1 only */
+  font-size:2.5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p {
+  line-height: 1.2em;
+  font-size: 18px;
+  
+}
+
+nav ul li {
+  /*descending selectors - elems to which all selectors apply (no commas)*/
+  list-style: none;
+}
+
+a {
+  /*font*/
+  font-size: 1.2em;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: darkblue;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  /*get all states for redundancy's sake*/
+  color:red;
+}
+
+
+/* img {
+ scale: 0.5;
+ position: relative;
+ 
+} */
+
+table {
+  border-width: 2px;
+  border-style:solid;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-width: 1px;
+  border-style: solid;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+thead {
+  font-size: 18px;
+  background-color: lightblue;
+}
+
+caption {
+  font-size: 1.2em;
+  padding: 12px;
+}
+
+legend {
+  font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input {
+  border: 1px solid black;
+}
+
+label {
+  font-size: 18px;
+  padding: 8px;
+  margin:12px;
+}
+select {
+  background-color: white;
+  border: 1px solid black;
+}
+
+input[type=submit] {
+  background-color: lightblue;
+  font-size: 18px;
+  padding: 8px;
+  margin: 20px;
+}
+
+h2.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: white;
+  min-width: 160px;
+  min-height: fit-content;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

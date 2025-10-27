@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - Online Shopping Mockup</title>
+    <link rel="stylesheet" href="css/forms-tables-semantics.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Shamazon</h1>
+        <nav>
+            <h2 class="sr-only">Navigation</h2>
+            <div class="dropdown">
+                <a href="#">Menu</a>
+                <ul class="dropdown-content">
+                    <li><a href="#product-listing">Product</a></li>
+                    <li><a href="#size-chart">Size Chart</a></li>
+                    <li><a href="#purchase-form">Purchase</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="product-listing">
+            <h2>Ethical Consumption T-Shirt</h2>
+            <img src="img/apple-shirt2.png" alt="A white t-shirt with a print of a cartoon apple eating an apple.">
+            <p>This is a t-shirt.</p>
+            <p>60% plastic, 35% goat hair, 5% undefinable substance. Mashine wash cold, do not dry. Made in your dreams.</p>
+            <p>$200.00</p>
+            <aside id="size-chart">
+                <h3>Sizing</h3>
+                <details open="">
+                    <summary>
+                        Click for Size Chart
+                    </summary>
+                    <table>
+                        <caption>Size Chart</caption> <!--title-visible on site-->
+                        <thead> <!-- table header w names for each column-->
+                            <tr>
+                            <th scope="col">Size</th>
+                            <th scope="col">Chest Width (in.)</th>
+                            <th scope="col">Length (in.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>XS</td>
+                                <td>18</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>20</td>
+                                <td>29</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>22</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>24</td>
+                                <td>31</td>
+                            </tr>
+                            <tr>
+                                <td>XL</td>
+                                <td>26</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td>2XL</td>
+                                <td>28</td>
+                                <td>33</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>   
+            </aside>
+            <aside id="purchase-form">
+                <h3>Purchase</h3>
+                <form id="purchase" method="post">
+                    <fieldset> <!-- sets of fields -->
+                        <legend>Buy the thing!</legend>
+                        <label for="amt">Quantity
+                        <input type="number" id="amt" placeholder="1">
+                        </label>
+                        <label for="size">Size</label>
+                            <select name="size" id="size">
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                                <option value="2xl">2XL</option>
+                            </select> 
+                        <input type="hidden" id="product-no" value="1">
+                        <input type="submit" id="add" value="Add to Cart">
+                    </fieldset>
+                </form>
+            </aside>
+        </section>
+    </main>
+</div>
+</body>
+</html>
