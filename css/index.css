@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Notch:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -20,8 +22,210 @@
     margin:0;
 }
 
+header {
+  text-align: center;
+  background-color: #1B3240;
+  color: white;
+}
+
 body {
-  background-color: white; /*add color + font*/
-  font-family: sans-serif;
+  background-color: whitesmoke; /*add color + font*/
+  font-family: "Raleway", sans-serif;
+  color: #2c3740;
   font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: "Stack Sans Notch", sans-serif;
+}
+
+h1 {
+  font-size: 2.25em;
+  padding: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p {
+  color: #2c3740;
+  line-height: 1.6em;
+}
+
+section {
+  padding: 1em;
+  margin: auto;
+}
+aside {
+  padding: 1em;
+  margin:auto;
+}
+nav {
+  padding: 1em;
+}
+footer {
+  padding: 0.5em;
+}
+
+figcaption {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+.skip-nav {
+  position: absolute;
+  transform: translateY(-200%);
+}
+
+.skip-nav {
+  transition: transform 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-columns: 
+    1fr  2fr;
+
+    grid-template-areas: 
+    "hd  hd"
+    "nv  nv"
+    "pic  abt"
+    "pic  abt"
+    "pic  abt"
+    "ft  ft";
+    place-content: center;
+}
+
+header {
+  grid-area: hd;
+}
+
+nav {
+  grid-area: nv;
+  background-color: #B0CFD6;
+}
+
+main {
+  grid-area: abt;
+  max-height: 100%;
+  background-color: whitesmoke;
+}
+
+aside {
+  grid-area: pic;
+  background-color: whitesmoke;
+}
+
+footer {
+    grid-area: ft;
+    background-color: #B0CFD6;
+}
+
+nav ul {
+    /*flexbox works, but it's not the best way to do overall layout*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #1b3240;
+}
+
+a:hover {
+  color: #1b3240;
+}
+
+a:active {
+  /*get all states for redundancy's sake*/
+  color:#1b3240;
+}
+/*and now for the responsive portion*/
+
+/*tablet*/
+@media screen 
+and (min-width: 641px)
+and (max-width: 900px) {
+    .container {
+        grid-template-columns: 
+        1fr 1fr;
+        grid-template-areas: 
+        "hd  hd"
+        "nv  nv"
+        "pic  abt"
+        "pic  abt"
+        "ft  ft";
+        place-content: center;
+    }
+}
+
+/*phone*/
+@media screen 
+and (max-width: 640px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:    
+        "hd"
+        "pic"
+        "abt"
+        "nv"
+        "ft";
+    }
+    nav ul {
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        padding: 10px 5px;
+        margin: 10px;
+        border: 1px solid black;
+        background: #1b3240;
+        color: white;
+    }
+    h2 {
+      text-align: center;
+    }
+    a:link {
+      color: white;
+    }
+
+    a:visited {
+      color: whitesmoke;
+    }
+
+    a:hover {
+      color: whitesmoke;
+    }
+
+    a:active {
+      /*get all states for redundancy's sake*/
+      color:whitesmoke;
+    }
+    section {
+      margin: 0.5em;
+    }
 }

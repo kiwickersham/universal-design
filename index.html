@@ -7,22 +7,39 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <div class="container">
+    <a class="skip-nav" href="#content">Skip to Content</a>
     <header>
         <h1>ATLS-CSCI 3150 Project Website: Simon Wickersham</h1>
     </header>
     <nav>
         <h2 class="sr-only">Navigation</h2>
         <ul>
-            <li> <a href="https://kiwickersham.github.io/universal-design/semantic-html-part1">Lab #2 - Coding & Posting a Web Page - The Basics</a> </li>
-            <li> <a href="https://kiwickersham.github.io/universal-design/forms-tables-semantics">Lab #3 - Tables, Forms, Tabbed Browsing, and Screen Reading</a> </li>
-            <li> <a href="https://kiwickersham.github.io/universal-design/responsive-design">Lab #4 - Accessible CSS Layout</a></li>
+            <li> <a id="lab2" href="https://kiwickersham.github.io/universal-design/semantic-html-part1" onmouseover="l2enter()" onmouseleave="l2leave()">Lab #2</a> </li>
+            <li> <a id="lab3" href="https://kiwickersham.github.io/universal-design/forms-tables-semantics" onmouseover="l3enter()" onmouseleave="l3leave()">Lab #3</a> </li>
+            <li> <a id="lab4" href="https://kiwickersham.github.io/universal-design/responsive-design" onmouseover="l4enter()" onmouseleave="l4leave()">Lab #4</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="content">
         <section id="about-me">
             <h2>About Me</h2>
-            <p>I am a senior computer science student at CU with a minor in Creative Technology in Design.</p>
+            <p>I am a senior computer science student at CU with a minor in Creative Technology in Design, and I plan to go into web development when I graduate at the end of this semester. My dream is to work for the W3C one day.</p>
+            <p>My favorite color is green, and in my free time I like to read and play video games. (I also like to paint, but I'm not very good at it.) I collect rocks, too, primarily agates, jasper, and anything else I can reasonably find on the ground.</p>
         </section>
     </main>
+    <aside>
+        <figure id="pic">
+            <img src="img/myface.png" alt="A young white person with short brown hair and glasses.">
+            <figcaption>Me, Spring 2025</figcaption>
+        </figure>
+    </aside>
+    <footer>
+        <p>
+            <small>&copy; 2025</small>
+        </p>
+    </footer>
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
