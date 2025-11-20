@@ -1,0 +1,143 @@
+/*import fonts here*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+ font-family: 'Raleway', sans-serif;
+ font-size: 16px;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Stack Sans Headline', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25em;
+  padding: 0.5em;
+}
+
+h2 {
+  font-size: 1.8em;
+  background-color: #cbdbd7;
+  color: #193441;
+  padding: 0.25em;
+}
+
+.skip-nav {
+  position: absolute;
+  transform: translateY(-200%);
+}
+
+.skip-nav {
+  transition: transform 0.3s;
+}
+
+section {
+ padding: 1em;
+  margin: auto;
+  background-color: #f5f5f5;
+  color: #193441;
+}
+
+p {
+  line-height: 1.6em;
+  padding: 0.5em;
+}
+
+nav ul li {
+    list-style: none;
+    font-family: "Inconsolata", sans-serif;
+    font-size: 1.2em;
+}
+
+a:link {
+  color: #193441;
+}
+
+a:visited {
+  color: #353b3b;
+}
+
+a:hover {
+  color: #355261;
+}
+
+a:active {
+  /*get all states for redundancy's sake*/
+  color:#355261;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-columns: 
+    1fr;
+
+    grid-template-areas: 
+    "hd"
+    "nv"
+    "mn"
+    "mn"
+    "mn"
+    "ft";
+}
+
+header {
+  grid-area: "hd";
+  padding: 1em;
+  background-color: #193441;
+  color:#f5f5f5;
+  place-content: center;
+}
+
+nav {
+  grid-area: "nv";
+  padding: 1em;
+  background-color: #f5f5f5;
+}
+
+main {
+  grid-area: "mn";
+  max-height: 100%;
+}
+
+footer {
+  grid-area: "ft";
+  text-align: center;
+  padding: 0.5em;
+  background-color: #193441;
+  color:#f5f5f5;
+}
+
+nav ul {
+    /*flexbox works, but it's not the best way to do overall layout*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
