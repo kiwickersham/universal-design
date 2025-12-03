@@ -21,3 +21,11 @@ function l4enter() {
 function l4leave() {
     document.getElementById("lab4").innerText = "Lab #4";
 }
+
+function penter() {
+    document.getElementById("proj").innerText = "Project - The Basics of Universal Design";
+}
+
+function pleave() {
+    document.getElementById("proj").innerText = "Project";
+}
