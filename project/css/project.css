@@ -41,7 +41,14 @@ h2 {
   font-size: 1.8em;
   background-color: #cbdbd7;
   color: #193441;
-  padding: 0.25em;
+  padding: 0.5em;
+  margin: 1em;
+  margin-top: 0em;
+}
+
+h3 {
+  font-size: 1.4em;
+  padding: 0.5em;
 }
 
 .skip-nav {
@@ -61,8 +68,24 @@ section {
 }
 
 p {
-  line-height: 1.6em;
+  line-height: 1.8em;
   padding: 0.5em;
+  margin: 0.5em 3em;
+}
+
+ol, ul {
+  padding: 0.5em;
+  margin: 0.5em 4em;
+  line-height: 2em;
+}
+
+blockquote {
+  background: white;
+  padding: 2em;
+  margin: 2em;
+  line-height: 2em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
 nav ul li {
@@ -108,7 +131,7 @@ a:active {
 }
 
 header {
-  grid-area: "hd";
+  grid-area: hd;
   padding: 1em;
   background-color: #193441;
   color:#f5f5f5;
@@ -116,18 +139,18 @@ header {
 }
 
 nav {
-  grid-area: "nv";
-  padding: 1em;
+  grid-area: nv;
+  padding: 0.5em;
   background-color: #f5f5f5;
 }
 
 main {
-  grid-area: "mn";
+  grid-area: mn;
   max-height: 100%;
 }
 
 footer {
-  grid-area: "ft";
+  grid-area: ft;
   text-align: center;
   padding: 0.5em;
   background-color: #193441;
@@ -140,4 +163,49 @@ nav ul {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-content: center;
+}
+
+@media screen 
+and (min-width: 641px)
+and (max-width: 900px) {
+    .container {
+        grid-template-columns: 
+    1fr;
+
+    grid-template-areas: 
+    "hd"
+    "nv"
+    "mn"
+    "mn"
+    "ft";
+    }
+
+    nav ul li a {
+  padding: 0.8em 1.5em;
+}
+
+}
+
+/*phone*/
+@media screen 
+and (max-width: 640px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:    
+        "hd"
+        "mn"
+        "nv"
+        "ft";
+    }
+    nav ul {
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        padding: 10px 5px;
+        margin: 5px;
+        border: 1px solid black;
+        background: #cbdbd7;
+    }
 }

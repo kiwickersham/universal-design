@@ -10,7 +10,7 @@
     <div class="container">
         <a class="skip-nav" href="#content">Skip to Content</a>
         <header>
-            <h1>Universal Design Explained</h1>
+            <h1>The Basics of Universal Design</h1>
         </header>
         <nav>
             <h2 class="sr-only">Main Navigation</h2>
@@ -24,8 +24,53 @@
         <main id="content">
             <section id="intro">
                 <h2>How to Implement Universal Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum adipisci quasi velit. Voluptatem, autem! Iure voluptatum, cumque ipsam quaerat optio ab, aliquid repellendus odit, consequatur maxime et facere quam inventore!</p>
+                <p>So how does one design universally? It takes practice. There's no one-size-fits-all method that generates the perfect solution to any given problem. Instead, truly good design requires research and experimentation: look at what others have done to see what works and what doesn't, then try things out yourself.</p>
+                <p>That said, there are some basic rules of thumb that can help you design a website or application that is legible, accessible, and high quality. Here are some of the recommended best practices for universal web design, as well as some resources and guidelines for ensuring your design is accessible.</p>
             </section>
+            <section id="best-practices">
+                <h2>Best Practices</h2>
+                <p>As the Internet grows and changes, so do the best practices for universal web design. The concepts detailed below are not intended as a comprehensive summary, but as an introduction to some of the considerations you'll need to make in designing an accessible, high-quality website.</p>
+                <h3>Semantic HTML</h3>
+                <p>One of the most important practices in accessible, quality web design is <a href="https://developer.mozilla.org/en-US/curriculum/core/semantic-html/">semantic HTML</a>. Semantic HTML means using super-specific HTML elements to encode your site's content based on its role within the context of the page. This has two purposes: </p>
+                <p>First, by attaching meaning to individual HTML elements, we give screen reader software (generally used by people who are blind or visually impaired) a way to parse the page content.</p>
+                <p>Second, using semantic tags forces us to think about the logical structure of the page and where each element fits within it.</p>
+                <h3>Responsive Design</h3>
+                <p>Another important element of universal web design is <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">responsive design</a>. Responsive design ensures that a site is functional and accessible on all devices, regardless of browser or screen size. This is obviously important for universal usability, but it's also a good way to analyze the overall layout of a design. Does the design work on mobile as well as desktop without sacrificing any important components? If not, you may need to rethink the design of those components.</p>
+                <h3>Alt Text and Contrast</h3>
+                <p>Two important pieces of accessible web design are <a href="https://www.w3.org/WAI/tutorials/images/">alternative text</a> (a.k.a. alt text) and <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">color contrast</a>. </p>
+                <p>For those who are blind or visually impaired, all images need a text alternative that conveys the same meaning. If it's decorative, mark it decorative; if it's informational, describe it. If you have a hard time describing an image because it's ambiguous or contains a lot of text, consider replacing it for the benefit of both sighted and non-sighted users.</p>
+                <p>Similarly, consider the contrast of the colors you're using in your design. If there's not enough contrast between text and background, users who are colorblind (and even those that aren't) may have trouble reading things.</p>
+                <!-- further reading? -->
+            </section>
+            <section id="accessibility">
+                <h2>Checking Accessibility</h2>
+                <p>So you've built a website. How do you make sure it's accessible?</p>
+                <p>The <abbr title="World Wide Web Consortium">W3C</abbr> publishes a set of standards known as <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, a.k.a. WCAG. These guidelines illustrate the fundamental requirements for making a webpage accessible to disabled users, and are widely used as a benchmark for assessing accessibility. If your work falls under Section 508 (U.S. Disability Law), it must meet the criteria for WCAG 2.0 Levels A and AA to be compliant with the law. </p>
+                <p>There also are many tools available online for evaluating the accessibility of a webpage according to WCAG and other guidelines.</p>
+                <aside>
+                    <h3>Accessibility Tools</h3>
+                    <p>Here's a list of some free tools for evaluating the accessibility of a webpage:</p>
+                    <ul>
+                        <li><a href="https://validator.w3.org/nu/">W3C Validator</a></li>
+                        <li><a href="https://wave.webaim.org/extension/">WAVE Accessibility Checker</a></li>
+                        <li><a href="https://silktide.com/toolbar/">Silktide Accessibility Checker</a></li>
+                        <li><a href="https://color.adobe.com/create/color-contrast-analyzer">Adobe Color Contrast Checker</a></li>
+                    </ul>
+                </aside>
+            </section>
+            <section id="summary">
+                <h2>Summary</h2>
+                <p>What it means to practice universal design can vary based on what you're designing and why. In order to design an accessible, high-quality website, follow best practices and guidelines, then test your designs with available tools.</p>
+            </section>
+            <!-- <aside id="resources">
+                <details open="">
+                    <summary>
+                        ::marker
+                        Further Reading
+                    </summary>
+                    <ul></ul>
+                </details>
+            </aside> -->
         </main>
         <footer>
             <p>
